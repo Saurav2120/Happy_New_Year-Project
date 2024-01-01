@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Poppins:wght@300;400;500;600&display=swap');@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*,*::before,*::after{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    transition:all 0.4s ease-in;
+}
+body{
+    background-color: black;
+    overflow:hidden;
+    height:100vh;
+}
+.msg{
+    color:rgb(230, 48, 157);
+    font-family:"Bilbo Swash Caps",cursive;
+    font-size:70px;
+    font-weight:bold;
+    text-align:center;
+    position:absolute;
+    top:40%;
+    left:35%;
+    opacity:0;
+    animation:message 3s ease-in-out 6s forwards;
+}
+@keyframes message{
+    0%{
+        opacity:0;
+        margin-top:0px;
+    }
+    100%{
+        opacity:1;
+        margin-top:-150px;
+    }
+
+}
+.year{
+    position:absolute;
+    text-align:center;
+    top:40%;
+    left:43%;
+}
+.y1,.y2,.y3,.old,.new{
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    font-size:80px;
+    font-weight:bolder;
+    letter-spacing:-5px;
+}
+.y1{
+    animation:y1_colorful 4.5s ease-in-out 5.5s forwards;
+}
+@keyframes y1_colorful{
+    0%{
+        color:white;
+    }
+    100%{
+        color:orange;
+    }
+}
+
+.y3{
+    animation:y3_colorful 4.5s ease-in-out 5.5s forwards;
+}
+@keyframes y3_colorful{
+    0%{
+        color:white;
+    }
+    100%{
+        color:rgb(0, 217, 255);
+        
+    }
+}
+.year .old{
+    position:absolute;
+    top:0%;
+    animation:old_animation 2.8s ease-in-out 4.5s forwards;
+}
+@keyframes old_animation{
+    0%{
+        top:0%;
+    }
+    100%{
+        top:-350%;
+    }
+
+}
+
+.new{
+    position:absolute;
+    right:-790px;
+    animation:new_animation 5s ease-in-out 2s forwards;
+    color:white;
+}
+@keyframes new_animation{
+    0%{
+        right:-790px;
+        color:white;
+    }
+    40%{
+        right:-90px;
+    }
+    90%{
+        right:-90px;
+        color:white;
+    }
+    100%{
+        right:-50px;
+        color:#9cf906;
+    }
+}
+.balloon{
+    width:50px;
+    height:60px;
+    border-radius:50%;
+    background-color: red;
+    position:absolute;
+    top:200px;
+    left:890px;
+    margin-top:-290px;
+    animation:balloon_animation 5s ease-in-out 2s forwards;
+
+}
+@keyframes balloon_animation{
+    0%{
+        left:890px;
+        top:200px;
+    }
+    40%{
+        left:190px;
+        top:200px;
+    }
+    50%{
+        left:140px;   
+        top:200px;  
+    }
+    100%{
+        left:140px;
+        top:-158px;
+    }
+}
+
+
+.balloon::after{
+    content:'';
+    width:1px;
+    height:60px;
+    position:absolute;
+    left:50%;
+    background-color:white;
+    /*margin-left:0px;*/
+    bottom:-60px;
+    
+}
+.balloon::before{
+    content:'';
+    position:absolute;
+    left:45%;
+    border-width:0px 8px 16px 8px;
+    border-style:solid;
+    border-color:transparent transparent red transparent;
+    bottom:-10px;
+    margin-left:-4.5px;
+}
+
